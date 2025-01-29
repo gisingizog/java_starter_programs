@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class StringManipulation {
     public static void displayMenu(){
         System.out.println("Use the menu below to interact with your input");
-        System.out.println("1. Reverse\n2. Change case\n3. Length\n4. Replace Characters\n5. Search for characters\n6. Match Pattern\n7. Split text\n8. Exit");
+        System.out.println("1. Reverse\n2. Change case\n3. Length\n4. Replace Characters\n5. Search for characters\n6. Match Pattern\n7. Exit");
         System.out.println("Enter your preferred operation: ");
     }
     public static void displayWelcome(){
@@ -120,7 +120,7 @@ public class StringManipulation {
             int choice=getValidChoice(scanner);
             scanner.nextLine();
 
-            if (choice == 8) {
+            if (choice == 7) {
                 System.out.println("Exiting the program....Goodbye");
                 break;
             }
