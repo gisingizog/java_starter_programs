@@ -3,27 +3,10 @@ package java_basics;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class SimpleCalculator {
+public class SimpleCalculator extends Base{
     public static void displayMenu() {
         System.out.println("Welcome on Calc App");
         System.out.println("1. Add( + ) \n2. Subtract( - ) \n3. Multiply( * ) \n4. Divide( / ) \n5. Modulus( % )\n6. Exit");
-    }
-
-    public static int getValidChoice(Scanner scanner) {
-        int choice;
-        while (true) {
-            try {
-                System.out.println("Choose one operation from the list above: ");
-                choice = scanner.nextInt();
-                if (choice >= 1 && choice <= 6) {
-                    return choice;
-                }
-                System.out.println("Error: Invalid choice. Please enter a value between 1 and 6");
-            } catch (InputMismatchException e) {
-                System.out.println("Error: Invalid input type. Please provide a numerical value");
-                scanner.nextLine();
-            }
-        }
     }
 
     public static float add(float a, float b) {

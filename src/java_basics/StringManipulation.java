@@ -1,11 +1,10 @@
 package java_basics;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class StringManipulation {
+public class StringManipulation extends Base{
     public static void displayMenu(){
         System.out.println("Use the menu below to interact with your input");
         System.out.println("1. Reverse\n2. Change case\n3. Length\n4. Replace Characters\n5. Search for characters\n6. Match Pattern\n7. Exit");
@@ -14,22 +13,6 @@ public class StringManipulation {
     public static void displayWelcome(){
         System.out.println("Welcome on the String Manipulation Platform.");
         System.out.println("Please enter the your string: ");
-    }
-    public static int getValidChoice(Scanner scanner){
-        int choice;
-        while(true){
-            try{
-                System.out.println("Choose one operation from the list above: ");
-                choice = scanner.nextInt();
-                if(choice >=1 && choice <= 8){
-                    return choice;
-                }
-                System.out.println("Error: Invalid choice. Please enter a value between 1 and 6");
-            }catch(InputMismatchException e){
-                System.out.println("Error: Invalid input type. Please provide a numerical value");
-                scanner.nextLine();
-            }
-        }
     }
     public static String reverse(String input){
         StringBuilder reversed = new StringBuilder(new String());
