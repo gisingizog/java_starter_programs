@@ -76,8 +76,6 @@ public class Pattern extends Base {
         }
         System.out.println();
     }
-
-
     private static void squareDiagonal(){
         int n = getNumberOfRows();
         for(int i = 0; i<n; i++){
@@ -134,6 +132,9 @@ public class Pattern extends Base {
                     System.out.println("Pascal's Triangle");
                     pascalTriangle();
                     break;
+                case 6:
+                    upPyramid(5);
+                    break; 
                 default:
                     System.out.println("Invalid choice. Try again later.");
                     break;
